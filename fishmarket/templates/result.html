@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Market Prediction</title>
+</head>
+<body>
+    <h1>Fish Market Assginment</h1>
+    <form action="{% url 'predict' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Predict">
+
+        <h4>Prediction Result: {{ value }}</h4>
+        
+    </form>
+    <br>
+</body>
+</html>
